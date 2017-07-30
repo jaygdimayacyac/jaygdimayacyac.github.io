@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Tags for HTML </title>
+</head>
+<body>
+<h3> Tags for HTML </h3>
+<h5> Listed below are the different tags that are used for HTML...</h5>
+<p>
+!DOCTYPE html: Defines document type as html <br/>
+head: Everything that is unseen but goes on top of browser <br/>
+title: The title that will be seen on the top of browser <br/>
+body: Everything that is seen on the website<br/>
+h(number): Heading<br/>
+p: Paragraph<br/>
+br/: Line break<br/>
+hr: Horizontal rule<br/>
+a href="#": Link within page<br/>
+a href="(url)": Link to url or any webpage within same folder<br/>
+a name="": Sets target destination for hyperlink<br/>
+!--""--: Comment<br/>
+</p>
+</body>
+</html>
