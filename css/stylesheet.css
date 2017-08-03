@@ -1,1 +1,89 @@
 /*Style Sheet for Jayg Dimayacyac's Website*/
+
+/*GLOBAL*/
+
+body {
+  font: sans-serif arial times;
+  padding:0;
+  margin:0;
+  color: white;
+}
+
+ul {
+  margin:0;
+  padding:0;
+}
+
+/*Header*/
+
+header .container{
+  background-color: #373737;
+  border-bottom: 4px solid #C0B283;
+  height: 100px;
+  overflow:hidden;
+}
+
+#branding{
+  float:right;
+  margin-right: 3%;
+}
+#branding img{
+  max-width: 90px;
+  margin-top: 5px;
+}
+
+nav{
+  margin-left: 3%;
+}
+
+.container nav a{
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  color: #f4f4f4
+}
+
+.container nav a:hover{
+  background-color: #c0b283;
+  font-style:italic;
+  font-weight:bold;
+  padding: 0 0 1px 0;
+}
+
+.container nav ul li{
+  float: left;
+  display: inline;
+  font-size: 15px;
+
+  margin: 0 3% 0 3%;
+  margin-top: 84px;
+}
+
+.container nav .current{
+  background-color: #C0B283;
+  color: #373737;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}
+
+/*Name Showcase*/
+
+#nameshowcase{
+  height:170px;
+  background-color: #DCD0C0;
+  border: 2px solid #373737;
+}
+
+#nameshowcase h1{
+  text-align:center;
+  color: #373737;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-shadow: 5px 3px 10px black;
+}
+
+#nameshowcase span{
+  color: #f4f4f4;
+}
