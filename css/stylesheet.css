@@ -7,6 +7,8 @@ body {
   padding:0;
   margin:0;
   color: white;
+  width:1270px;
+  position:absolute;
 }
 
 ul {
@@ -17,10 +19,11 @@ ul {
 /*Header*/
 
 header .container{
+  width:100%;
   background-color: #373737;
   border-bottom: 4px solid #C0B283;
   height: 100px;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 #branding{
@@ -45,7 +48,6 @@ nav{
 
 .container nav a:hover{
   background-color: #c0b283;
-  font-style:italic;
   font-weight:bold;
   padding: 0 0 1px 0;
 }
@@ -63,27 +65,109 @@ nav{
   background-color: #C0B283;
   color: #373737;
   font-weight: bold;
-  font-style: italic;
   text-align: center;
 }
 
 /*Name Showcase*/
 
-#nameshowcase{
-  height:170px;
-  background-color: #DCD0C0;
-  border: 2px solid #373737;
+#nameshowcase .container{
+  width:100%;
+  height:480px;
+  background-image: url("../img/ICCA.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 45% 50%;
+  border-top: 2px solid #373737;
+  border-bottom: 2px solid #373737;
 }
 
-#nameshowcase h1{
-  text-align:center;
-  color: #373737;
+#nameshowcase .container #welcome, #nameshowcase .container #greet{
   font-weight: bold;
-  font-size: 30px;
   text-transform: uppercase;
-  text-shadow: 5px 3px 10px black;
 }
 
-#nameshowcase span{
+#nameshowcase .container #welcome{
+  padding:0;
+  margin:0;
+  color:#f4f4f4;
+  text-align: right;
+  float: right;
+  margin-top: -30px;
+  margin-right: 5px;
+  font-size:25px;
+}
+
+#nameshowcase .container #greet{
+  margin-top: 280px;
+  margin-left: 5px;
+  font-size: 30px;
+}
+
+#nameshowcase h1 span{
+  color: #DCD0C0;
+}
+
+/*Portrait Profile*/
+
+.ppcontainer{
+  width:100%;
+  height:500px;
+  border-top: 2px solid #C0B283;
+}
+
+/*Portrait Caption*/
+
+#portraitcaption .container{
+float: left;
+width: 30%;
+height:100%;
+background-color: #373737;
+text-align: center;
+}
+
+#portraitcaption .container h1{
   color: #f4f4f4;
+}
+
+#portraitcaption .container h1 span{
+  color: #DCD0C0;
+}
+
+/*Portrait*/
+#portrait .container{
+  width: 30%;
+  height:500px;
+  margin-top: 72px;
+  position:absolute;
+  float:left;
+  background-image: url("../img/portrait.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*Profile*/
+#profile .container{
+  float:right;
+  color: #f4f4f4;
+  width: 69.6%;
+  height: 100%;
+  background-color: #373737;
+  padding-left:5px;
+  overflow:hidden;
+}
+
+#profile .container h1{
+  margin-left:50%;
+}
+
+#profile .container ul{
+  padding:0;
+  margin-left: 30px;
+  float:left;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#profile .container ul li{
+  display:inline-block;
 }
