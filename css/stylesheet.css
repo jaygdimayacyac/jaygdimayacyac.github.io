@@ -3,12 +3,12 @@
 /*GLOBAL*/
 
 body {
-  font: sans-serif arial times;
+  font-family: cursive;
   padding:0;
   margin:0;
   color: white;
   width:1270px;
-  position:absolute;
+  position: absolute;
 }
 
 ul {
@@ -35,30 +35,33 @@ header .container{
   margin-top: 5px;
 }
 
-nav{
+.container .navcontainer{
   margin-left: 3%;
-}
-
-.container nav a{
+  float: left;
+  width: 60%;
   text-decoration: none;
   font-weight: bold;
   text-align: center;
-  color: #f4f4f4
+  padding: 0 0 1px 0;
+  color: #f4f4f4;
+}
+
+.container .navcontainer ul li{
+  float: left;
+  display: inline;
+  font-size: 15px;
+  margin: 0 3% 0 3%;
+  margin-top: 78px;
+}
+
+.container nav a{
+  color: #f4f4f4;
 }
 
 .container nav a:hover{
   background-color: #c0b283;
   font-weight:bold;
-  padding: 0 0 1px 0;
-}
-
-.container nav ul li{
-  float: left;
-  display: inline;
-  font-size: 15px;
-
-  margin: 0 3% 0 3%;
-  margin-top: 84px;
+  text-decoration: none;
 }
 
 .container nav .current{
@@ -73,10 +76,10 @@ nav{
 #nameshowcase .container{
   width:100%;
   height:480px;
-  background-image: url("../img/ICCA.png");
+  background-image: url("../img/ICCA2.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 45% 50%;
+  background-position: 50% 30%;
   border-top: 2px solid #373737;
   border-bottom: 2px solid #373737;
 }
@@ -87,87 +90,223 @@ nav{
 }
 
 #nameshowcase .container #welcome{
-  padding:0;
-  margin:0;
-  color:#f4f4f4;
+  color: #f4f4f4;
   text-align: right;
   float: right;
-  margin-top: -30px;
-  margin-right: 5px;
-  font-size:25px;
+  margin-right: 20px;
 }
 
 #nameshowcase .container #greet{
-  margin-top: 280px;
+  margin-top: 20%;
   margin-left: 5px;
-  font-size: 30px;
+  color: #f4f4f4;
+  float: left;
 }
 
-#nameshowcase h1 span{
-  color: #DCD0C0;
-}
-
-/*Portrait Profile*/
-
-.ppcontainer{
-  width:100%;
-  height:500px;
-  border-top: 2px solid #C0B283;
-}
-
-/*Portrait Caption*/
-
-#portraitcaption .container{
-float: left;
-width: 30%;
-height:100%;
-background-color: #373737;
-text-align: center;
-}
-
-#portraitcaption .container h1{
+#nameshowcase .container #greet2{
+  margin-top: 36%;
+  margin-left: 5px;
   color: #f4f4f4;
 }
 
-#portraitcaption .container h1 span{
-  color: #DCD0C0;
+#nameshowcase .container #welcome h1, #nameshowcase .container #greet h1{
+  font-size: 50px;
+}
+
+#nameshowcase .container #welcome h1, #nameshowcase .container #greet h1,
+#nameshowcase .container #greet2 h4{
+  font-weight: bold;
+  font-family: comic;
+}
+
+#nameshowcase h1 span, #nameshowcase h4 span{
+  color: #C0B283;
+}
+
+/*Brief About*/
+
+.aboutcontainer{
+  width:100%;
+  height:600px;
+  border-top: 2px solid #C0B283;
+}
+
+/*Quote*/
+#quote .container{
+  width: 30%;
+  height:600px;
+  float:left;
+  background-color: #373737;
+}
+
+#quote .container p{
+  font-size: 30px;
+  font-style: italic;
+  font-family:comic;
+  text-align: center;
+  margin-top: 35%;
+  margin-left: 15%;
+  color: #373737;
+  width: 80%;
+  padding: 5px;
+  border: 4px solid #C0B283;
+  background-color: #DCD0C0;
 }
 
 /*Portrait*/
 #portrait .container{
   width: 30%;
-  height:500px;
-  margin-top: 72px;
-  position:absolute;
-  float:left;
-  background-image: url("../img/portrait.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  height:600px;
+  margin-left:30%;
+  background-color:#373737;
+  position: absolute;
+}
+
+#portrait .container img{
+  margin-top: 30px;
+  margin-left: 2%;
+  width: 400px;
 }
 
 /*Profile*/
 #profile .container{
-  float:right;
+  float: right;
   color: #f4f4f4;
-  width: 69.6%;
-  height: 100%;
+  width: 40%;
+  height: 600px;
   background-color: #373737;
-  padding-left:5px;
   overflow:hidden;
 }
 
-#profile .container h1{
-  margin-left:50%;
-}
-
 #profile .container ul{
-  padding:0;
-  margin-left: 30px;
-  float:left;
-  font-size: 15px;
+  padding:2px;
+  margin-top: 25%;
+  margin-left: 15%;
+  float: left;
+  font-size: 20px;
   font-weight: bold;
+  font-style: italic;
+  border: 2px dashed #C0B283;
 }
 
 #profile .container ul li{
   display:inline-block;
+}
+
+#profile .subject{
+  color: #C0B283;
+}
+
+/*CurrentProject*/
+
+#currentprojects .container{
+  margin-top:2px;
+  width: 100%;
+  background-color: #373737;
+  border-top: 2px solid #C0B283;
+  height: 580px;
+}
+
+#currentprojects .container h2{
+  color: #f4f4f4;
+  padding:0;
+  margin-top: 20px;
+  text-align: center;
+  font-family: comic;
+  font-size: 35px;
+  font-style: italic;
+}
+
+#currentprojects .container .project1{
+  width:45%;
+  float: left;
+  height:100px;
+  color: #f4f4f4;
+  margin-top: 30px;
+  margin-left: 10px;
+  text-align: justify;
+}
+
+#currentprojects .container .project2{
+  width:45%;
+  float: right;
+  height:100px;
+  color: #f4f4f4;
+  margin-top: 30px;
+  margin-right: 10px;
+  text-align: justify;
+}
+
+#currentprojects .container .project3{
+  width:45%;
+  float: left;
+  height:100px;
+  color: #f4f4f4;
+  margin-top: 130px;
+  margin-left: 10px;
+  text-align: justify;
+}
+
+#currentprojects .container .project4{
+  width:45%;
+  float: right;
+  height:100px;
+  color: #f4f4f4;
+  margin-top: 130px;
+  margin-right: 10px;
+  text-align: justify;
+}
+
+#currentprojects .container h3{
+  color: #C0B283;
+  text-align: center;
+}
+
+#currentprojects .container p{
+  font-style: italic;
+}
+
+/*Footer*/
+
+footer .container{
+  height: 40px;
+  width: 100%;
+  border-top:6px solid #C0B283;
+  background-color: #DCD0C0;
+}
+
+footer .container .icons{
+  margin-left: 2%;
+  margin-top: .3%;
+  float: left;
+  width: 35%;
+}
+
+footer .container .icons a{
+  margin: 0 12% 0 12%;
+}
+
+footer .container .icons a:hover{
+  background-color: #C0B283;
+  padding: 20px 5px 0 5px;
+}
+
+footer .container .contactcontainer{
+  float: right;
+  width: 60%;
+  margin-top: .3%;
+}
+
+footer .container .contactcontainer ul li{
+  margin: 0 3% 0 3%;
+  display: inline;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+footer .container .contactcontainer ul a:hover{
+  text-decoration: none;
+  background-color: #C0B283;
+  padding: 6px 0 10px 0;
 }
