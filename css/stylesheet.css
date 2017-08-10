@@ -3,7 +3,7 @@
 /*GLOBAL*/
 
 body {
-  font-family: cursive;
+  font-family: comic;
   padding:0;
   margin:0;
   color: white;
@@ -75,7 +75,7 @@ header .container{
 
 #nameshowcase .container{
   width:100%;
-  height:480px;
+  height:540px;
   background-image: url("../img/ICCA2.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -104,13 +104,18 @@ header .container{
 }
 
 #nameshowcase .container #greet2{
-  margin-top: 36%;
+  margin-top: 38%;
   margin-left: 5px;
   color: #f4f4f4;
+  text-align: right;
 }
 
 #nameshowcase .container #welcome h1, #nameshowcase .container #greet h1{
   font-size: 50px;
+}
+
+#nameshowcase .container #greet2 h4{
+  font-size: 40px;
 }
 
 #nameshowcase .container #welcome h1, #nameshowcase .container #greet h1,
@@ -128,7 +133,7 @@ header .container{
 .aboutcontainer{
   width:100%;
   height:600px;
-  border-top: 2px solid #C0B283;
+  border-top: 4px solid #C0B283;
 }
 
 /*Quote*/
@@ -140,17 +145,17 @@ header .container{
 }
 
 #quote .container p{
-  font-size: 30px;
+  font-size: 40px;
   font-style: italic;
   font-family:comic;
-  text-align: center;
-  margin-top: 35%;
-  margin-left: 15%;
-  color: #373737;
-  width: 80%;
+  text-align: justify;
+  margin-top: 50%;
+  margin-left: 10%;
+  color: #C0B283;
+  width: 90%;
   padding: 5px;
+  background-color: #373737;
   border: 4px solid #C0B283;
-  background-color: #DCD0C0;
 }
 
 /*Portrait*/
@@ -166,6 +171,7 @@ header .container{
   margin-top: 30px;
   margin-left: 2%;
   width: 400px;
+  border: 4px solid #C0B283;
 }
 
 /*Profile*/
@@ -178,32 +184,37 @@ header .container{
   overflow:hidden;
 }
 
-#profile .container ul{
-  padding:2px;
+#profile table{
   margin-top: 25%;
   margin-left: 15%;
-  float: left;
   font-size: 20px;
   font-weight: bold;
   font-style: italic;
-  border: 2px dashed #C0B283;
+  background-color: #373737;
+  border: 4px solid #C0B283;
 }
 
-#profile .container ul li{
-  display:inline-block;
-}
-
-#profile .subject{
+#profile table .subject{
   color: #C0B283;
+  text-align: left;
+  width: 50%;
+  padding: 8px;
+}
+
+#profile table .answer{
+  color: #f4f4f4;
+  text-align: center;
+  width: 50%;
+  padding: 8px;
 }
 
 /*CurrentProject*/
 
 #currentprojects .container{
-  margin-top:2px;
+  margin-top:4px;
   width: 100%;
   background-color: #373737;
-  border-top: 2px solid #C0B283;
+  border-top: 4px solid #C0B283;
   height: 580px;
 }
 
@@ -214,7 +225,6 @@ header .container{
   text-align: center;
   font-family: comic;
   font-size: 35px;
-  font-style: italic;
 }
 
 #currentprojects .container .project1{
@@ -259,11 +269,46 @@ header .container{
 
 #currentprojects .container h3{
   color: #C0B283;
+  font-family: comic;
   text-align: center;
 }
 
 #currentprojects .container p{
   font-style: italic;
+  font-family: comic;
+}
+
+/*Skill Tree*/
+
+#skilltree .container{
+  width:100%;
+  height:150px;
+  background-image: url("../img/skilltree.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 40%;
+  border-top: 2px solid #373737;
+  border-bottom: 2px solid #373737;
+}
+
+#skilltree .container h2{
+  font-size: 100px;
+  font-family: comic;
+  color: #C0B283;
+  text-align:center;
+}
+
+#skilltree .skilltreecontainer{
+  height: 500px;
+  background-color: #373737;
+  width: 100%;
+  border-top:4px solid #C0B283;
+}
+
+#skilltree .skilltreecontainer img{
+  height: 300px;
+  margin-top: 5px;
+  margin-left: 10%;
 }
 
 /*Footer*/
@@ -282,13 +327,19 @@ footer .container .icons{
   width: 35%;
 }
 
+footer .container .fa-linkedin, footer .container .fa-facebook, footer .container .fa-google-plus{
+  color: #373737;
+}
+
 footer .container .icons a{
   margin: 0 12% 0 12%;
 }
 
 footer .container .icons a:hover{
   background-color: #C0B283;
-  padding: 20px 5px 0 5px;
+  padding-top: 20px;
+  border-left: 2px solid #C0B283;
+  border-right:2px solid #C0B283;
 }
 
 footer .container .contactcontainer{
@@ -300,13 +351,21 @@ footer .container .contactcontainer{
 footer .container .contactcontainer ul li{
   margin: 0 3% 0 3%;
   display: inline;
-  font-style: italic;
-  font-size: 14px;
+  font-family: comic;
+  font-size: 15px;
   font-weight: bolder;
+  color: #373737;
 }
 
 footer .container .contactcontainer ul a:hover{
   text-decoration: none;
   background-color: #C0B283;
   padding: 6px 0 10px 0;
+  border-left: 2px solid #C0B283;
+  border-right:2px solid #C0B283;
+}
+
+footer .container .contactcontainer ul a{
+  text-decoration: none;
+  color: #373737;
 }
