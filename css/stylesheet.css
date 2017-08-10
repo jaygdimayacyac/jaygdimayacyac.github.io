@@ -24,7 +24,7 @@ header .container{
   width:100%;
   background-color: #373636;
   opacity: 0.9;
-  height: 100px;
+  height: 120px;
 }
 
 #branding{
@@ -32,7 +32,7 @@ header .container{
   margin-right: 3%;
 }
 #branding img{
-  height:90px;
+  height:120px;
   margin-top: 5px;
   position: static;
 }
@@ -50,7 +50,7 @@ header .container{
 .container .navcontainer ul li{
   float: left;
   display: inline;
-  font-size: 20px;
+  font-size: 25px;
   margin: 0 6% 0 6%;
   margin-top: 40px;
 }
@@ -60,16 +60,15 @@ header .container{
 }
 
 .container nav a:hover{
-  background-color: #c0b283;
+  color: #C0B283;
   font-weight:bold;
   text-decoration: none;
   padding: 2px 0 2px 0;
 }
 
 .container nav .current{
-  background-color: #C0B283;
-  color: #373737;
-  font-weight: bold;
+  color: #C0B283;
+  text-decoration: overline;
   text-align: center;
 }
 
@@ -89,7 +88,7 @@ header .container{
 #nameshowcase .container #welcome{
   color: #f4f4f4;
   text-align: left;
-  margin-top: 100px;
+  margin-top: 105px;
   margin-left: 1%;
 }
 
@@ -104,6 +103,7 @@ header .container{
   margin-top: 140px;
   position: static;
   width: 40%;
+  margin-left: 1%;
 }
 
 #nameshowcase .container #greet h1{
@@ -331,40 +331,73 @@ header .container{
 /*Footer*/
 
 footer .container{
-  height: 150px;
+  height: 260px;
   width: 100%;
   border-top:6px solid #C0B283;
   background-color: #373737;
 }
 
 footer .container .icons{
-  margin: 2% auto 0 auto;
+  margin: 2% 0 0 .5%;
   text-align: center;
+  width: 100%;
 }
 
 footer .container .fa-linkedin, footer .container .fa-facebook, footer .container .fa-google-plus{
   color: #f4f4f4;
 }
 
+footer .container .fa-linkedin:hover{
+  color: #c0b283;
+}
+
+footer .container .fa-facebook:hover{
+  color: #c0b283;
+}
+
+footer .container .fa-google-plus:hover{
+  color: #c0b283;
+}
+
 footer .container .icons a{
   margin: 0 5% 0 5%;
 }
 
-footer .container .backtotop{
-  margin: 4% auto 0 auto;
-  text-align: center;
-  position: static;
+footer .link{
+  height: 100px;
+  margin-top: 2%;
 }
 
-footer .container .backtotop a{
+footer .link img{
+  width: 80px;
+  margin: 1% 0 0 46.75%;
+  opacity: 0.3;
+}
+
+footer .link a{
   color: #f4f4f4;
-  font-family: comic;
-  font-size: 15px;
+  display: block;
+  font-weight: bolder;
+  font-size: 10px;
+  margin-left: 47.75%;
+  width: 100px;
 }
 
-footer .container .backtotop a:hover{
-  color: #C0B283;
-  font-family: comic;
+footer .link a:hover{
+  color: #c0b283;
+}
+
+footer .container .copyright{
+  color: #f4f4f4;
+  margin-top: 2%;
+}
+
+footer .container .copyright h4{
   font-size: 15px;
-  text-decoration: none;
+  text-align: center;
+}
+
+footer .container .copyright p{
+  font-size: 10px;
+  text-align: center;
 }
