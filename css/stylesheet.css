@@ -7,8 +7,10 @@ body {
   padding:0;
   margin:0;
   color: white;
+}
+
+body .bodycontainer{
   width:1270px;
-  position: absolute;
 }
 
 ul {
@@ -20,10 +22,9 @@ ul {
 
 header .container{
   width:100%;
-  background-color: #373737;
-  border-bottom: 4px solid #C0B283;
+  background-color: #373636;
+  opacity: 0.9;
   height: 100px;
-  overflow: hidden;
 }
 
 #branding{
@@ -31,27 +32,27 @@ header .container{
   margin-right: 3%;
 }
 #branding img{
-  max-width: 90px;
+  height:90px;
   margin-top: 5px;
+  position: static;
 }
 
 .container .navcontainer{
   margin-left: 3%;
   float: left;
-  width: 60%;
+  width: 80%;
   text-decoration: none;
   font-weight: bold;
   text-align: center;
-  padding: 0 0 1px 0;
   color: #f4f4f4;
 }
 
 .container .navcontainer ul li{
   float: left;
   display: inline;
-  font-size: 15px;
-  margin: 0 3% 0 3%;
-  margin-top: 78px;
+  font-size: 20px;
+  margin: 0 6% 0 6%;
+  margin-top: 40px;
 }
 
 .container nav a{
@@ -62,6 +63,7 @@ header .container{
   background-color: #c0b283;
   font-weight:bold;
   text-decoration: none;
+  padding: 2px 0 2px 0;
 }
 
 .container nav .current{
@@ -75,7 +77,7 @@ header .container{
 
 #nameshowcase .container{
   width:100%;
-  height:540px;
+  height:730px;
   background-image: url("../img/ICCA2.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -84,44 +86,48 @@ header .container{
   border-bottom: 2px solid #373737;
 }
 
-#nameshowcase .container #welcome, #nameshowcase .container #greet{
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
 #nameshowcase .container #welcome{
   color: #f4f4f4;
-  text-align: right;
-  float: right;
-  margin-right: 20px;
+  text-align: left;
+  margin-top: 100px;
+  margin-left: 1%;
+}
+
+#nameshowcase .container #welcome h1{
+  font-size:80px;
 }
 
 #nameshowcase .container #greet{
-  margin-top: 20%;
-  margin-left: 5px;
   color: #f4f4f4;
+  text-align: left;
   float: left;
+  margin-top: 140px;
+  position: static;
+  width: 40%;
+}
+
+#nameshowcase .container #greet h1{
+  font-size:70px;
 }
 
 #nameshowcase .container #greet2{
-  margin-top: 38%;
-  margin-left: 5px;
   color: #f4f4f4;
   text-align: right;
+  float: right;
+  margin-top: 140px;
+  position: static;
+  width: 40%;
 }
 
-#nameshowcase .container #welcome h1, #nameshowcase .container #greet h1{
-  font-size: 50px;
-}
-
-#nameshowcase .container #greet2 h4{
-  font-size: 40px;
+#nameshowcase .container #greet2 h1{
+  font-size: 70px;
 }
 
 #nameshowcase .container #welcome h1, #nameshowcase .container #greet h1,
-#nameshowcase .container #greet2 h4{
+#nameshowcase .container #greet2 h1{
   font-weight: bold;
   font-family: comic;
+  text-transform: uppercase;
 }
 
 #nameshowcase h1 span, #nameshowcase h4 span{
@@ -132,99 +138,105 @@ header .container{
 
 .aboutcontainer{
   width:100%;
-  height:600px;
-  border-top: 4px solid #C0B283;
-}
-
-/*Quote*/
-#quote .container{
-  width: 30%;
-  height:600px;
-  float:left;
+  height:760px;
+  border-top: 2px solid #C0B283;
   background-color: #373737;
 }
 
-#quote .container p{
-  font-size: 40px;
-  font-style: italic;
-  font-family:comic;
-  text-align: justify;
-  margin-top: 50%;
-  margin-left: 10%;
+.aboutcontainer .aboutheading{
+  width:100%;
+  height:150px;
+  background-color: #373737;
+}
+
+.aboutcontainer .aboutheading h2{
+  font-size: 80px;
+  font-family: comic;
   color: #C0B283;
-  width: 90%;
-  padding: 5px;
-  background-color: #373737;
-  border: 4px solid #C0B283;
+  text-align:center;
 }
 
 /*Portrait*/
 #portrait .container{
-  width: 30%;
-  height:600px;
-  margin-left:30%;
-  background-color:#373737;
-  position: absolute;
+  float: left;
+  width: 50%;
+  height:610px;
+  position: static;
 }
 
 #portrait .container img{
-  margin-top: 30px;
-  margin-left: 2%;
-  width: 400px;
-  border: 4px solid #C0B283;
+  display: block;
+  margin: 3% 0 0 50%;
+  width: 40%;
 }
 
-/*Profile*/
-#profile .container{
-  float: right;
-  color: #f4f4f4;
-  width: 40%;
-  height: 600px;
+#portrait .container p{
+  font-size: 25px;
+  font-style: italic;
+  font-family:comic;
+  text-align: center;
+  color: #C0B283;
+  width: 50%;
+  padding: 5px;
   background-color: #373737;
-  overflow:hidden;
+  margin: 2% 0 0 45%;
+}
+
+
+/*Profile*/
+
+#profile .container{
+  color: #f4f4f4;
+  width: 50%;
+  height: 610px;
+  position: static;
+  margin-left: 50%;
 }
 
 #profile table{
-  margin-top: 25%;
-  margin-left: 15%;
+  margin: 3% 0 0 0;
   font-size: 20px;
   font-weight: bold;
   font-style: italic;
   background-color: #373737;
   border: 4px solid #C0B283;
+  width: 60%;
 }
 
 #profile table .subject{
   color: #C0B283;
   text-align: left;
-  width: 50%;
-  padding: 8px;
+  width: 30%;
+  padding: 10px;
 }
 
 #profile table .answer{
   color: #f4f4f4;
-  text-align: center;
-  width: 50%;
-  padding: 8px;
+  text-align: right;
+  width: 70%;
+  padding: 10px;
 }
 
 /*CurrentProject*/
 
 #currentprojects .container{
-  margin-top:4px;
   width: 100%;
   background-color: #373737;
-  border-top: 4px solid #C0B283;
-  height: 580px;
+  border-top: 2px solid #C0B283;
+  height: 740px;
 }
 
-#currentprojects .container h2{
-  color: #f4f4f4;
-  padding:0;
-  margin-top: 20px;
-  text-align: center;
+#currentprojects .currentprojectsheading{
+  width:100%;
+  height:150px;
+  background-color: #373737;
+}
+
+#currentprojects .container .currentprojectsheading h2{
+  font-size: 80px;
   font-family: comic;
-  font-size: 35px;
+  color: #C0B283;
+  text-align:center;
 }
 
 #currentprojects .container .project1{
@@ -233,8 +245,9 @@ header .container{
   height:100px;
   color: #f4f4f4;
   margin-top: 30px;
-  margin-left: 10px;
+  margin-left: 2%;
   text-align: justify;
+  position: static;
 }
 
 #currentprojects .container .project2{
@@ -243,8 +256,9 @@ header .container{
   height:100px;
   color: #f4f4f4;
   margin-top: 30px;
-  margin-right: 10px;
+  margin-right: 2%;
   text-align: justify;
+  position: static;
 }
 
 #currentprojects .container .project3{
@@ -252,9 +266,10 @@ header .container{
   float: left;
   height:100px;
   color: #f4f4f4;
-  margin-top: 130px;
-  margin-left: 10px;
+  margin-top: 160px;
+  margin-left: 2%;
   text-align: justify;
+  position: static;
 }
 
 #currentprojects .container .project4{
@@ -262,20 +277,23 @@ header .container{
   float: right;
   height:100px;
   color: #f4f4f4;
-  margin-top: 130px;
-  margin-right: 10px;
+  margin-top: 160px;
+  margin-right: 2%;
   text-align: justify;
+  position: static;
 }
 
 #currentprojects .container h3{
   color: #C0B283;
   font-family: comic;
   text-align: center;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 #currentprojects .container p{
-  font-style: italic;
   font-family: comic;
+  font-size: 20px;
 }
 
 /*Skill Tree*/
@@ -287,12 +305,11 @@ header .container{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 40%;
-  border-top: 2px solid #373737;
-  border-bottom: 2px solid #373737;
+  border-bottom: 2px solid #c0b283;
 }
 
 #skilltree .container h2{
-  font-size: 100px;
+  font-size: 80px;
   font-family: comic;
   color: #C0B283;
   text-align:center;
@@ -314,58 +331,40 @@ header .container{
 /*Footer*/
 
 footer .container{
-  height: 40px;
+  height: 150px;
   width: 100%;
   border-top:6px solid #C0B283;
-  background-color: #DCD0C0;
+  background-color: #373737;
 }
 
 footer .container .icons{
-  margin-left: 2%;
-  margin-top: .3%;
-  float: left;
-  width: 35%;
+  margin: 2% auto 0 auto;
+  text-align: center;
 }
 
 footer .container .fa-linkedin, footer .container .fa-facebook, footer .container .fa-google-plus{
-  color: #373737;
+  color: #f4f4f4;
 }
 
 footer .container .icons a{
-  margin: 0 12% 0 12%;
+  margin: 0 5% 0 5%;
 }
 
-footer .container .icons a:hover{
-  background-color: #C0B283;
-  padding-top: 20px;
-  border-left: 2px solid #C0B283;
-  border-right:2px solid #C0B283;
+footer .container .backtotop{
+  margin: 4% auto 0 auto;
+  text-align: center;
+  position: static;
 }
 
-footer .container .contactcontainer{
-  float: right;
-  width: 60%;
-  margin-top: .3%;
-}
-
-footer .container .contactcontainer ul li{
-  margin: 0 3% 0 3%;
-  display: inline;
+footer .container .backtotop a{
+  color: #f4f4f4;
   font-family: comic;
   font-size: 15px;
-  font-weight: bolder;
-  color: #373737;
 }
 
-footer .container .contactcontainer ul a:hover{
+footer .container .backtotop a:hover{
+  color: #C0B283;
+  font-family: comic;
+  font-size: 15px;
   text-decoration: none;
-  background-color: #C0B283;
-  padding: 6px 0 10px 0;
-  border-left: 2px solid #C0B283;
-  border-right:2px solid #C0B283;
-}
-
-footer .container .contactcontainer ul a{
-  text-decoration: none;
-  color: #373737;
 }
