@@ -9,9 +9,6 @@ body {
   color: white;
 }
 
-body .bodycontainer{
-  width:1270px;
-}
 
 ul {
   margin:0;
@@ -76,7 +73,7 @@ header .container{
 
 #nameshowcase .container{
   width:100%;
-  height:730px;
+  height:750px;
   background-image: url("../img/ICCA2.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -100,7 +97,7 @@ header .container{
   color: #f4f4f4;
   text-align: left;
   float: left;
-  margin-top: 140px;
+  margin-top: 160px;
   position: static;
   width: 40%;
   margin-left: 1%;
@@ -114,7 +111,7 @@ header .container{
   color: #f4f4f4;
   text-align: right;
   float: right;
-  margin-top: 140px;
+  margin-top: 160px;
   position: static;
   width: 40%;
 }
@@ -296,9 +293,16 @@ header .container{
   font-size: 20px;
 }
 
+/*Blackspace*/
+
+.blackspace{
+  height: 150px;
+  background-color: #373737;
+}
+
 /*Skill Tree*/
 
-#skilltree .container{
+#skilltree .skilltreeheading{
   width:100%;
   height:150px;
   background-image: url("../img/skilltree.jpg");
@@ -308,7 +312,7 @@ header .container{
   border-bottom: 2px solid #c0b283;
 }
 
-#skilltree .container h2{
+#skilltree .skilltreeheading h2{
   font-size: 80px;
   font-family: comic;
   color: #C0B283;
@@ -331,7 +335,7 @@ header .container{
 /*Footer*/
 
 footer .container{
-  height: 260px;
+  height: 280px;
   width: 100%;
   border-top:6px solid #C0B283;
   background-color: #373737;
@@ -340,6 +344,7 @@ footer .container{
 footer .container .icons{
   margin: 2% 0 0 .5%;
   text-align: center;
+  align-items: center;
   width: 100%;
 }
 
@@ -370,7 +375,7 @@ footer .link{
 
 footer .link img{
   width: 80px;
-  margin: 1% 0 0 46.75%;
+  margin: 1% 0 0 47.5%;
   opacity: 0.3;
 }
 
@@ -379,12 +384,13 @@ footer .link a{
   display: block;
   font-weight: bolder;
   font-size: 10px;
-  margin-left: 47.75%;
+  margin-left: 48.3%;
   width: 100px;
 }
 
 footer .link a:hover{
   color: #c0b283;
+  text-decoration: none;
 }
 
 footer .container .copyright{
