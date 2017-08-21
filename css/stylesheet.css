@@ -2,167 +2,205 @@
 
 /*GLOBAL*/
 
-body {
+*{
   font-family: comic;
   padding:0;
   margin:0;
-  color: white;
-  position: absolute;
 }
 
+/*Overall Grid Container*/
 
-ul {
-  margin:0;
-  padding:0;
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "header header header header"
+  "topanchor topanchor topanchor topanchor"
+  "welcome welcome welcome welcome"
+  "aboutme aboutme aboutme aboutme";
+  position: relative;
 }
-
 
 /*Header*/
 
-header .container{
-  width:100%;
-  background-color: #373636;
-  opacity: 0.9;
-  height: 120px;
+header{
+  position: fixed;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 120px 1fr;
+  grid-template-areas:
+  "nav branding icons";
+  height: 50px;
+  background-color: #050404;
+  opacity: 0.8;
+  border-bottom: 2px solid #c0b283;
 }
 
-#branding{
-  margin-right: 3%;
-  float:right;
-}
-
-#branding img{
-  height:120px;
-  margin-top: 5px;
-}
-
-.container .navcontainer{
-  margin-left: 3%;
-  float: left;
-  width: 80%;
+header nav{
+  grid-area: nav;
+  height:50px;
   text-decoration: none;
   font-weight: bold;
-  text-align: center;
-  color: #f4f4f4;
-  position: relative;
-}
-
-.container .navcontainer ul li{
-  float: left;
-  display: inline;
-  font-size: 25px;
-  margin: 0 6% 0 6%;
-  margin-top: 40px;
-}
-
-.container nav a{
   color: #f4f4f4;
 }
 
-.container nav a:hover{
-  color: #C0B283;
-  font-weight:bold;
+header nav table{
+  width: 100%;
+}
+
+header nav table tr{
+  height: 10px;
+}
+
+header nav a{
+  color: #f4f4f4;
   text-decoration: none;
-  padding: 2px 0 2px 0;
 }
 
-.container nav .current{
+header nav a:hover{
   color: #C0B283;
-  text-decoration: overline;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header .branding{
+  grid-area: branding;
+}
+
+header .branding img{
+  display: block;
+  margin: auto;
+  margin-top: 3px;
+  height: 100px;
+}
+
+header .icons{
+  grid-area: icons;
+  height: 50px;
+}
+
+header .icons table{
+  width: 100%;
+  table-layout: fixed;
+}
+
+header .icons table tr{
+  height: 10px;
   text-align: center;
 }
 
-/*Name Showcase*/
+header .icons i{
+  font-size: 20px;
+}
 
-#nameshowcase .container{
-  width:100%;
-  height:680px;
-  background-image: url("../img/ICCA.png");
+header .fa-linkedin, header .fa-facebook, header .fa-google-plus{
+  color: #f4f4f4;
+}
+
+header .icons .fa-linkedin:hover, header .icons .fa-facebook:hover, header .icons .fa-google-plus:hover{
+  color: #c0b283;
+}
+
+/*Top Anchor*/
+.topanchor{
+  grid-area: topanchor;
+  background-color: #373737;
+  height: 50px;
+}
+
+/*Welcome Page*/
+.welcome{
+  grid-area: welcome;
+  background-image: url("../img/demo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0% 0%;
-  border-top: 2px solid #373737;
-  border-bottom: 2px solid #373737;
+  background-position: 0% 30%;
+  height: 625px;
 }
 
-#nameshowcase .container #welcome{
-  color: #f4f4f4;
-  text-align: left;
-  margin-top: 105px;
-  margin-left: 1%;
+.welcome{
+  text-align: center;
+  margin: auto;
 }
 
-#nameshowcase .container #welcome h1{
-  font-size:80px;
-}
-
-#nameshowcase .container #greet{
-  color: #f4f4f4;
-  text-align: left;
-  float: left;
-  left: 3%;
-  top: 18%;
-  width: 40%;
-  position: relative;
-}
-
-#nameshowcase .container #greet h1{
-  font-size:70px;
-}
-
-#nameshowcase .container #greet2{
-  color: #f4f4f4;
-  text-align: right;
-  float: right;
-  right: 3%;
-  top: 18%;
-  width: 40%;
-  position: relative;
-}
-
-#nameshowcase .container #greet2 h1{
-  font-size: 70px;
-}
-
-#nameshowcase .container #welcome h1, #nameshowcase .container #greet h1,
-#nameshowcase .container #greet2 h1{
-  font-weight: bold;
-  font-family: comic;
+.welcome h1{
+  font-size: 100px;
   text-transform: uppercase;
+  font-weight: bolder;
+  text-shadow: 3px 2px #050404;
+  color: #c0b283;
 }
 
-#nameshowcase h1 span, #nameshowcase h4 span{
-  color: #C0B283;
+.welcome h2{
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 3px 2px #050404;
+  color: #f4f4f4;
 }
 
-/*Brief About*/
-
-.aboutcontainer{
-  width:100%;
-  height:760px;
-  border-top: 2px solid #C0B283;
-  background-color: #373737;
+.welcome p, .welcome a{
+  color: #f4f4f4;
 }
 
-.aboutcontainer .aboutheading{
-  width:100%;
-  height:150px;
-  background-color: #373737;
+.welcome a{
+  font-weight: bold;
 }
 
-.aboutcontainer .aboutheading h2{
-  font-size: 80px;
-  font-family: comic;
-  color: #C0B283;
-  text-align:center;
+.welcome table{
+  width: 100%;
+  color: #f4f4f4;
+  table-layout: fixed;
 }
+
+.welcome a:hover{
+  color: #c0b283;
+}
+
+/*About Me*/
+
+.aboutme{
+grid-area: aboutme;
+display: grid;
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+grid-template-areas:
+"."
+"aboutmeheading"
+"."
+"."
+".";
+height: 640px;
+background-image: url("../img/aboutmetitle2.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 0% 60%;
+border-bottom: 2px solid #c0b283;
+text-align: center;
+}
+
+.aboutme .aboutmeheading{
+  grid-area: aboutmeheading;
+}
+
+.aboutme .aboutmeheading h1{
+  font-size:100px;
+  font-style: comic;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 3px 2px #050404;
+  text-align: center;
+  color: #f4f4f4;
+}
+
 
 /*Portrait*/
-#portrait .container{
+/*#portrait .container{
   float: left;
-  width: 50%;
   height:610px;
-  position: absolute;
+  grid-row: 3;
+  grid-area: portrait;
 }
 
 #portrait .container img{
@@ -181,17 +219,17 @@ header .container{
   padding: 5px;
   background-color: #373737;
   margin: 2% 0 0 50%;
-}
+}*/
 
 
 /*Profile*/
 
-#profile .container{
+/*#profile .container{
   color: #f4f4f4;
   width: 50%;
   height: 610px;
-  position: absolute;
   margin-left: 50%;
+  grid-area: profile;
 }
 
 #profile table{
@@ -216,11 +254,11 @@ header .container{
   text-align: right;
   width: 70%;
   padding: 10px;
-}
+}*/
 
 /*CurrentProject*/
 
-#currentprojects .container{
+/*#currentprojects .container{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap:3em;
@@ -289,17 +327,11 @@ header .container{
   font-family: comic;
   font-size: 20px;
 }
-
-/*Blackspace
-.blackspace{
-  height:120px;
-  background-color: #373737;
-}
 */
 
 /*About Me*/
 
-#aboutmetitle .container{
+/*#aboutmetitle .container{
   width:100%;
   height:620px;
   background-image: url("../img/aboutmetitle.jpg");
@@ -319,12 +351,12 @@ header .container{
   text-align: right;
   margin-top: 105px;
   margin-right: 1%;
-}
+}*/
 
 
 /*Skill Tree*/
 
-#skilltree .skilltreeheading{
+/*#skilltree .skilltreeheading{
   width:100%;
   height:150px;
   background-image: url("../img/skilltree.jpg");
@@ -354,11 +386,11 @@ header .container{
   height: 300px;
   margin-top: 150px;
   margin-left: 10%;
-}
+}*/
 
 /*Footer*/
 
-footer .container{
+/*footer .container{
   height: 280px;
   width: 100%;
   border-top:6px solid #C0B283;
@@ -438,6 +470,6 @@ footer .container .copyright h4{
 footer .container .copyright p{
   font-size: 10px;
   text-align: center;
-}
+}*/
 
 /*Media Queries*/
