@@ -42,6 +42,7 @@ header{
   background-color: #050404;
   opacity: 0.8;
   border-bottom: 2px solid #c0b283;
+  z-index: 2;
 }
 
 header nav{
@@ -117,7 +118,8 @@ header .icons .fa-linkedin:hover, header .icons .fa-facebook:hover, header .icon
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0% 30%;
-  height: 800px;
+  background-attachment: fixed;
+  height: 960px;
   text-align: center;
 }
 
@@ -185,12 +187,11 @@ grid-template-areas:
 ". ."
 ". ."
 ". .";
-height: 900px;
+height: 960px;
 background-image: url("../img/aboutmetitle.jpg");
 background-size: cover;
 background-repeat: no-repeat;
 background-position: 30% 60%;
-background-attachment: fixed;
 border-top: 2px solid #c0b283;
 text-align: center;
 }
@@ -217,33 +218,32 @@ text-align: center;
   grid-area: whoiam;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 150px 500px 80px 200px;
   grid-template-areas:
-  ". ."
   "heading heading"
   "portrait profile"
-  "portrait profile"
-  "portrait profile"
-  "portrait profile"
-  "portrait profile"
   "quote profile"
-  ". .";
+  "space space";
   grid-row-gap: 50px;
-  height: 660px;
   background-color: #050404;
+  opacity: 0.8;
+  border-top: #050404 solid 2px;
 }
 
 .whoiam .heading{
+  display: flex;
   grid-area: heading;
-  text-align: center;
+  background-color: #373737;
+  align-items: center;
+  justify-content: center;
 }
 
 .whoiam .heading h2{
   font-weight: bolder;
   color: #f4f4f4;
   font-size: 50px;
-  text-decoration: overline;
   text-decoration-color: #c0b283;
+
 }
 
 .whoiam .portrait{
@@ -289,6 +289,20 @@ text-align: center;
   border: 2px solid #c0b283;
   width: 90%;
   height: 100%;
+  font-size: 15px;
+  padding: 30px;
+}
+
+.whoiam .profile .subject{
+  text-align: left;
+}
+
+.whoiam .profile .answer{
+  text-align: right;
+}
+
+.whoiam .space{
+  grid-area: space;
 }
 
 /*What I'm Doing*/
@@ -297,26 +311,29 @@ text-align: center;
   grid-area: whatimdoing;
   background-color: #050404;
   display: grid;
-  padding: 5% 10% 5% 10%;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 150px 300px 300px 200px;
   grid-template-areas:
   "heading heading"
   "project1 project2"
   "project3 project4"
-  ". .";
+  "space space";
 }
 
 .whatimdoing .heading{
+  display: flex;
   grid-area: heading;
   text-align: center;
-  height: 100px;
+  background-color: #373737;
+  align-items: center;
+  justify-content: center;
 }
 
 .whatimdoing .heading h2{
   font-weight: bolder;
   color: #f4f4f4;
   font-size: 50px;
-  text-decoration: overline;
+  opacity: 0.8;
   text-decoration-color: #c0b283;
 }
 
@@ -341,7 +358,7 @@ text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px;
+  padding: 50px 100px 50px 100px;
   max-height: 200px;
 }
 
@@ -364,7 +381,11 @@ text-align: center;
   color: #c0b283;
   margin: 20px 20px 20px 20px;
   text-align: justify;
-  min-height: 40px;
+  max-height: 40px;
+}
+
+.whatimdoing .space{
+  grid-area: space;
 }
 
 /*Progress Bars*/
@@ -399,7 +420,7 @@ text-align: center;
    inset 0 2px 9px  rgba(255,255,255,0.3),
    inset 0 -2px 6px rgba(0,0,0,0.4);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   background-color: #c0b283;
   background-image: linear-gradient(to top, #c0b283 60%, #373737);
 }
@@ -434,25 +455,90 @@ text-align: center;
   grid-area: whatiknow;
   background-color: #050404;
   display: grid;
-  padding: 5% 10% 5% 10%;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 60% 30% 10%;
+  grid-template-rows: 150px 800px 200px;
   grid-template-areas:
-  "heading heading"
-  ". .";
+  "heading heading heading"
+  "skillchart legend ."
+  "space space space";
 }
 
 .whatiknow .heading{
+  display: flex;
   grid-area: heading;
   text-align: center;
-  height: 100px;
+  background-color: #373737;
+  align-items: center;
+  justify-content: center;
 }
 
 .whatiknow .heading h2{
   font-weight: bolder;
   color: #f4f4f4;
   font-size: 50px;
-  text-decoration: overline;
+  opacity: 0.8;
   text-decoration-color: #c0b283;
+}
+
+.whatiknow .skillchart{
+  grid-area: skillchart;
+  display: flex;
+}
+
+  .whatiknow .skillchart img{
+    margin: auto;
+    width: 75%;
+    height: 80%;
+  }
+
+.whatiknow .legendcontainer{
+  grid-area: legend;
+  display: flex;
+}
+
+.whatiknow .legend{
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  ". pulp ."
+  ". engineering ."
+  ". lab ."
+  ". computer .";
+  color: #f4f4f4;
+  max-width: 800px;
+  margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  border: #f4f4f4 dashed 1px;
+}
+
+.pulp, .engineering, .lab, .computer{
+  font-size: 15px;
+  padding: 5px;
+}
+
+.whatiknow .legend .pulp{
+  grid-area: pulp;
+  color: rgb(165, 165, 165);
+}
+
+.whatiknow .legend .engineering{
+  grid-area: engineering;
+  color: rgb(84, 130, 53);
+}
+
+.whatiknow .legend .lab{
+  grid-area: lab;
+  color: rgb(197, 90, 17);
+}
+
+.whatiknow .legend .computer{
+  grid-area: computer;
+  color: rgb(68, 114, 196);
+}
+
+.whatknow .space{
+  grid-area: space;
 }
 
 /*MY WORK*/
@@ -464,17 +550,16 @@ grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-areas:
 ". ."
 ". ."
-". myworkheading"
+"myworkheading ."
 ". ."
 ". ."
 ". .";
-height: 900px;
+height: 960px;
 background-image: url("../img/mywork.png");
 background-color: #050404;
 background-size: cover;
 background-repeat: no-repeat;
-background-position: 0% 10%;
-background-attachment: fixed;
+background-position: 120px 0px;
 border-top: 2px solid #c0b283;
 text-align: center;
 }
@@ -484,7 +569,7 @@ text-align: center;
 }
 
 .mywork .myworkheading h1{
-  font-size:100px;
+  font-size: 100px;
   font-style: comic;
   font-weight: bold;
   text-transform: uppercase;
@@ -495,66 +580,339 @@ text-align: center;
   color: #f4f4f4;
 }
 
+/* What I've Achieved */
 .whativeachieved{
   grid-area: whativeachieved;
+  display: flex;
+  flex-direction: column;
 }
 
 .whativeachieved .heading{
-  grid-area: heading;
+  display: flex;
   text-align: center;
-  height: 100px;
+  height: 150px;
+  background-color: #373737;
+  border-top: #050404 2px solid;
+  align-items: center;
+  justify-content: center;
 }
 
 .whativeachieved .heading h2{
   font-weight: bolder;
   color: #f4f4f4;
   font-size: 50px;
-  text-decoration: overline;
+  opacity: 0.8;
   text-decoration-color: #c0b283;
 }
 
+.whativeachieved .achieved{
+  grid-area: achieved;
+  display: grid;
+  grid-template-areas:
+  "achievement1"
+  "achievement2"
+  "achievement3"
+  "achievement4"
+  "achievement5";
+  grid-row-gap: 40px;
+  color: #f4f4f4;
+}
+
+.whativeachieved .achieved .achievement1{
+  grid-area: achievement1;
+  display: grid;
+  grid-template-areas:
+  "summary"
+  "media";
+}
+
+.whativeachieved .achievement1 .media{
+  grid-area: media;
+  display: grid;
+  padding: auto;
+}
+
+  .whativeachieved .achievement1 .media .img1{
+    margin: auto;
+    max-width: 50%;
+  }
+
+
+.whativeachieved .achieved .achievement2{
+  grid-area: achievement2;
+  display: grid;
+  grid-template-areas:
+  "summary"
+  "media";
+}
+
+  .whativeachieved .achievement2 .media{
+    grid-area: media;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas:
+    "img2 img4";
+    padding: auto;
+  }
+
+    .whativeachieved .achievement2 .media .img2{
+      grid-area: img2;
+      margin: auto;
+      max-width: 50%;
+    }
+
+    .whativeachieved .achievement2 .media .img4{
+      grid-area: img4;
+      margin: auto;
+      max-width: 60%;
+    }
+
+
+.whativeachieved .achieved .achievement3{
+  grid-area: achievement3;
+  display: grid;
+  grid-template-areas:
+  "summary"
+  "media";
+}
+
+.whativeachieved .achievement3 .media{
+  grid-area: media;
+  display: grid;
+  padding: auto;
+}
+
+  .whativeachieved .achievement3 .media .img1{
+    margin: auto;
+    max-width: 50%;
+  }
+
+.whativeachieved .achieved .achievement4{
+  grid-area: achievement4;
+  display: grid;
+  grid-template-areas:
+  "summary"
+  "media";
+}
+
+  .whativeachieved .achievement4 .media{
+    grid-area: media;
+    display: grid;
+    padding: auto;
+  }
+
+    .whativeachieved .achievement4 .media .img1{
+      margin: auto;
+      max-width: 50%;
+    }
+
+  .whativeachieved .achieved .achievement5{
+    grid-area: achievement5;
+    display: grid;
+    grid-template-areas:
+    "summary"
+    "media";
+  }
+
+    .whativeachieved .achievement5 .media{
+      grid-area: media;
+      display: flex;
+      flex-direction: row;
+      height:300px;
+    }
+
+      .whativeachieved .achievement5 .media .img1, .whativeachieved .achievement5 .media .img2,
+      .whativeachieved .achievement5 .media .img3{
+        margin: auto;
+        max-height: 300px;
+      }
+
+
+.whativeachieved .summary{
+  grid-area: summary;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
+  font-size: 15px;
+}
+
+  .whativeachieved .summary .category{
+    font-weight: bold;
+    padding: 10px;
+    color: #c0b283;
+    vertical-align: top;
+    min-width: 200px;
+  }
+
+  .whativeachieved .summary .answer{
+    padding: 10px;
+    color: #f4f4f4;
+    text-align: justify;
+  }
+
+  .whativeachieved .summary .answer a{
+    text-decoration: none;
+    color: #c0b283;
+  }
+
+  .whativeachieved .space{
+    height: 200px;
+  }
+
+
+/* Where I've Worked */
+
 .whereiveworked{
   grid-area: whereiveworked;
+  background-color: #050404;
 }
 
 .whereiveworked .heading{
+  display: flex;
   grid-area: heading;
   text-align: center;
-  height: 100px;
+  height: 150px;
+  background-color: #373737;
+  align-items: center;
+  justify-content: center;
 }
 
 .whereiveworked .heading h2{
   font-weight: bolder;
   color: #f4f4f4;
   font-size: 50px;
-  text-decoration: overline;
+  opacity: 0.8;
   text-decoration-color: #c0b283;
 }
 
+.whereiveworked .worked{
+  display: grid;
+  grid-template-areas:
+  "work1"
+  "work2"
+  "work3"
+  "work4";
+  grid-row-gap: 40px;
+  color: #f4f4f4;
+}
+
+.whereiveworked .worked .work1{
+  grid-area: work1;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-areas:
+  "summary media";
+}
+
+
+.whereiveworked .worked .work2{
+  grid-area: work2;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas:
+  "media summary";
+}
+
+.whereiveworked .worked .work3{
+  grid-area: work3;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-areas:
+  "summary media";
+}
+
+.whereiveworked .worked .work4{
+  grid-area: work4;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas:
+  "media summary";
+}
+
+.whereiveworked .summary{
+  grid-area: summary;
+  padding: 30px;
+  font-size: 15px;
+}
+
+  .whereiveworked .summary .category{
+    font-weight: bold;
+    padding: 10px;
+    color: #c0b283;
+    vertical-align: top;
+    min-width: 200px;
+  }
+
+  .whereiveworked .summary .answer{
+    padding: 10px;
+    color: #f4f4f4;
+    text-align: justify;
+  }
+
+  .whereiveworked .summary .answer a{
+    text-decoration: none;
+    color: #c0b283;
+  }
+
+  .whereiveworked .worked .media{
+    grid-area: media;
+    display: grid;
+    padding: auto;
+    margin: auto;
+    width: 60%;
+    height: 160px;
+    border: #c0b283 2px solid;
+    background-color: #f4f4f4;
+  }
+
+  .whereiveworked .worked .media img{
+    margin: auto;
+    max-width:60%;
+    max-height: 90%;
+  }
+
+  .whereiveworked .space{
+    grid-area: space;
+    height: 200px;
+  }
+
+/* Where I've Volunteered */
+
 .whereivevolunteered{
   grid-area: whereivevolunteered;
+  height: 960px;
 }
 
 .whereivevolunteered .heading{
+  display: flex;
   grid-area: heading;
   text-align: center;
-  height: 100px;
+  height: 150px;
+  background-color: #373737;
+  align-items: center;
+  justify-content: center;
 }
 
 .whereivevolunteered .heading h2{
   font-weight: bolder;
   color: #f4f4f4;
   font-size: 50px;
-  text-decoration: overline;
+  opacity: 0.8;
   text-decoration-color: #c0b283;
+}
+
+.whereivevolunteered .space{
+  grid-area: space;
+  height: 200px;
 }
 
 /*Footer*/
 
 footer{
   grid-area: footer;
-  height: 150px;
-  border-top:6px solid #C0B283;
+  height: 120px;
+  border-top:2px solid #C0B283;
   background-color: #050404;
   color: #f4f4f4;
   font-size: 5px;
@@ -563,7 +921,7 @@ footer{
 }
 
 footer .icons{
-  height: 40px;
+  height: 30px;
 }
 
 footer .icons table{
@@ -572,7 +930,6 @@ footer .icons table{
 }
 
 footer .icons table tr{
-  height: 10px;
   text-align: center;
 }
 
@@ -581,7 +938,7 @@ footer .icons i{
 }
 
 footer .fa-linkedin, footer .fa-facebook, footer .fa-google-plus{
-  color: inherit;
+  color: #f4f4f4;
 }
 
 footer .fa-linkedin:hover, footer .fa-facebook:hover, footer .fa-google-plus:hover{
